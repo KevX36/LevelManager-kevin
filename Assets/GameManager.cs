@@ -7,12 +7,14 @@ public class GameManager : MonoBehaviour
     {
         if(instance == null)
         {
+            Debug.Log("This is now instance");
             instance = this;
             DontDestroyOnLoad(this);
         }
         else
         {
-            Destroy(this);
+            Debug.Log("this is not instnaces");
+            Destroy(this.gameObject);
         }
     }
     public LevelManager levelManager;
